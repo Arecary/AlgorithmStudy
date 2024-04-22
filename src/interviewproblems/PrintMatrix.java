@@ -1,4 +1,4 @@
-package interviewProblems;
+package interviewproblems;
 
 /**
  * Write a function with loops to display the following matrix
