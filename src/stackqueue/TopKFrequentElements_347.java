@@ -33,9 +33,9 @@ public class TopKFrequentElements_347 {
       if (pq.size() < k) {
         pq.add(element);
       } else {
-        if(entry.getValue()>pq.peek()[1]){//当前元素出现次数大于小顶堆的根结点(这k个元素中出现次数最少的那个)
+        if (entry.getValue() > pq.peek()[1]) {//当前元素出现次数大于小顶堆的根结点(这k个元素中出现次数最少的那个)
           pq.poll();//弹出队头(小顶堆的根结点),即把堆里出现次数最少的那个删除,留下的就是出现次数多的了
-          pq.add(new int[]{entry.getKey(),entry.getValue()});
+          pq.add(new int[]{entry.getKey(), entry.getValue()});
         }
       }
     }
@@ -82,5 +82,8 @@ public class TopKFrequentElements_347 {
 
     return res;
   }
+
+
+
 
 }
