@@ -1,2 +1,4 @@
-package graphtheory;public class AllPathsFromSourceToTarget_797 {
+package graphtheory;
+
+public class AllPathsFromSourceToTarget_797 {
 }
