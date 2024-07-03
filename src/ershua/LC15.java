@@ -14,25 +14,37 @@ public class LC15 {
 
     Arrays.sort(nums);
 
-
-    int right = nums.length - 1;
     for (int i = 0; i < nums.length; i++) {
       if (nums[i] > 0) {
         return res;
       }
       int left = i + 1;
-      int a = nums[i];
-      int b = nums[left];
-      int c = nums[right];
+      int right = nums.length - 1;
 
-      while (a + b + c > 0 && left < right) {
-        right--;
+      if (i != 0 && nums[i] == nums[i - 1]) {
+        continue;
       }
-      while (a + b + c < 0 && left < right) {
-        left++;
+
+      while (left < right) {
+        int a = nums[i];
+        int b = nums[left];
+        int c = nums[right];
+        int sum = a + b + c;
+        if (sum > 0) {
+          right --;
+        }else if(sum < 0) {
+          left++;
+        }else {
+          res.add(Arrays.asList(a, b, c));
+          while (right > left && nums[right] == nums[right - 1]) right--;
+          while (right > left && nums[left] == nums[left + 1]) left++;
+          right --;
+          left++;
+        }
       }
     }
 
+    return res;
   }
 
 
