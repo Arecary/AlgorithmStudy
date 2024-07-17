@@ -53,4 +53,14 @@ public class LC151 {
   }
 
 
+  public String reverseWords2(String s) {
+    StringBuilder ab = new StringBuilder();
+    String[] words = s.split(" +");
+    for (int i = words.length - 1; i >= 0; i--) {
+      ab.append(words[i]);
+      ab.append(" ");
+    }
+    return ab.toString().trim();
+  }
+
 }
