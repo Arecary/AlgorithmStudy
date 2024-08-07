@@ -4,6 +4,7 @@ public class Glint0805 {
 
   public static void main(String[] args) {
     printPatternNumber();
+    System.out.println();
     printPatternHash();
 
   }
