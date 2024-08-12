@@ -5,31 +5,29 @@ public class Glint0808 {
 
   public static void main(String[] args) {
 
-    int age = -10;
+    int num1 = 10;
+    int num2 = 0;
     try {
-      getAge(age);
+      int res = doDiv(num1, num2);
+      System.out.println("res is " + res);
     } catch (MyException e) {
       System.out.println("Caught exception: " + e.getMessage());
       e.printStackTrace();
     } finally {
-      System.out.println("input age is " + age);
+      System.out.println("input num1 is " + num1);
+      System.out.println("input num2 is " + num2);
     }
 
   }
 
 
-  /**
-   * Method to get the age if it is valid.
-   *
-   * @param age the age to be checked
-   * @return the valid age
-   * @throws MyException if the age is less than 0
-   */
-  public static int getAge(int age){
-    if (age < 0) {
-      throw new MyException("age can not be less than 0");
+
+  public static int doDiv(int num1, int num2){
+    if (num2 == 0) {
+      throw new MyException("The dividend cannot be 0 ");
     }
-    return age;
+
+    return num1/num2;
   }
 
 }

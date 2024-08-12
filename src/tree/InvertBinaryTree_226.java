@@ -50,7 +50,7 @@ public class InvertBinaryTree_226 {
   }
 
 
-  // 迭代BFS,就是102的层序遍历法
+  // 迭代BFS,就是102的层序遍历法levelorder traversal
   public TreeNode invertTree1(TreeNode root) {
     if (root == null) {
       return null;
