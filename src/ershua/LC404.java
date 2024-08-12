@@ -23,6 +23,21 @@ public class LC404 {
   }
 
   public int sumOfLeftLeaves(TreeNode root) {
+    if(root == null){
+      return 0;
+    }
+
+    int leftValue = sumOfLeftLeaves(root.left);
+    int rightValue = sumOfLeftLeaves(root.right);
+
+    int mindValue = 0;
+    if (root.left != null && root.left.left == null && root.left.right == null) {
+      mindValue = root.left.val;
+    }
+
+    int res = leftValue + rightValue + mindValue;
+
+    return res;
 
   }
 
