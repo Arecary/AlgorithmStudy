@@ -11,7 +11,7 @@ public class Glint0813 {
   public static void main(String[] args) {
     Product p1 = new Product(1, "Mango", "Fruit", 2.99);
     Product p2 = new Product(2, "Coca-Cola", "Beverage", 1.5);
-    Product p3 = new Product(3, "iPhone 14", "Phone", 799); // case-sensitive
+    Product p3 = new Product(3, "iPhone 14", "Phone", 799); // lowerCase
     Product p4 = new Product(4, "Apple", "Fruit", 1.00);
     Product p5 = new Product(5, "Thinkpad x1", "Laptop", 1711.37);
     Product p6 = new Product(6, "IPhone 13", "Phone", 599);
