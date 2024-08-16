@@ -24,6 +24,14 @@ public class Glint0813 {
     products.add(p5);
     products.add(p4);
 
+    // 用stream流收集id大于2的产品并生成一个list
+    List<Product> productList = products.stream().filter(P -> P.getId() > 2).toList();
+    // Get product names, where category is in [Fruit , Phone]
+    List<String> productName = products.stream()
+            .filter(p -> p.getCategory().equals("Fruit") || p.getCategory().equals("Phone"))
+            .map(p -> p.getName()).toList();
+
+
 // sort by id
     Collections.sort(products);
     System.out.println("Sorted by ID:");
