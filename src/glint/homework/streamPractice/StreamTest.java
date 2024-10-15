@@ -36,7 +36,21 @@ public class StreamTest {
 
 }
 
-// stream api
-// 重写equals和hashCode
-// dockerfile
-// database index
+// java8新特性
+// stream api fini
+// 重写equals和hashCode fini
+// 写dockerfile  如何部署AWS
+// 写database index，index有哪几类
+// 数据库区别 sql nosql 优点，mongodb什么情况下用
+// 存储过程，触发器，PL/SQL怎么写
+// 微服务架构，优点，为什么用
+// hibernate 写一个例子
+// Jenkins 的集成和配置，如何编写 CI/CD 流水线，自动化测试和部署流程
+// 如何使用 Spring Security 实现身份验证和授权。
+// 如何通过 Spring AOP 引入日志和监控功能。DI IOC
+// REACT REDUX AJAX
+// 如何测试 junit
+// Kafka怎么写
+// 设计模式：工厂模式，模版模式
+// 写一个json
+// 如何创建并维护适当的文档 用swagger？
