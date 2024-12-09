@@ -1,0 +1,16 @@
+FROM openjdk:11-jre-slim
+
+# 设置工作目录为 /app
+WORKDIR /app
+
+# 将 JAR 文件复制到 /app 目录
+COPY my-app.jar /app/my-app.jar
+COPY my-app.jar my-app.jar
+# 省略也行，因为上面WORKDIR /app默认了
+
+
+# 暴露 8080 端口
+EXPOSE 8080
+
+# 运行 JAR 文件
+ENTRYPOINT ["java", "-jar", "my-app.jar"]

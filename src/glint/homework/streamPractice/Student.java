@@ -2,7 +2,7 @@ package glint.homework.streamPractice;
 
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student>{
   String name;
   int age;
 
@@ -81,35 +81,8 @@ public class Student {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  @Override
+  public int compareTo(Student o) {
+    return this.getAge() - o.getAge();
+  }
 }

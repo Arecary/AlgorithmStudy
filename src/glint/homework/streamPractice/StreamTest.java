@@ -1,6 +1,10 @@
 package glint.homework.streamPractice;
 
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamTest {
@@ -16,23 +20,43 @@ public class StreamTest {
     list.add(s2);
     list.add(s3);
 
-    list.stream()
-//            .sorted(new Comparator<Student>() {
-//              @Override
-//              public int compare(Student o1, Student o2) {
-//                return -o1.getName().compareTo(o2.getName());
-//              }
-//            })
-            .sorted((o1, o2) -> -o1.getName().compareTo(o2.getName()))
-            .forEach(element -> System.out.println(element.getName() + element.getAge()));
+
+//    list.stream()
+////            .sorted(new Comparator<Student>() {
+////              @Override
+////              public int compare(Student o1, Student o2) {
+////                return -o1.getName().compareTo(o2.getName());
+////              }
+////            })
+//            .sorted((o1, o2) -> -o1.getName().compareTo(o2.getName()))
+//            .forEach(element -> System.out.println(element.getName() + element.getAge()));
 
 
     Stream<Student> streamStudent = Stream.of(s1,s2,s3);
 
 
+    Optional<Student> optionalStudent = list.stream()
+            .min((o1, o2) -> o1.getAge() - o2.getAge());
+
+
+    Student res = optionalStudent.orElseGet(() -> new Student("ab", 33));
+    System.out.println(res.getName() + res.getAge());
+
+
+    Student s4 = new Student("testStudent", 40){
+      @Override
+      public int hashCode(){
+        return Objects.hash(name,age);
+      }
+    };
+    int code = s4.hashCode();
+    System.out.println(code);
+
+
+
+
 
   }
-
 
 }
 
